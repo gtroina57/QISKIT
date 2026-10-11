@@ -1,0 +1,32 @@
+{
+  "stage": 3,
+  "status": "passed",
+  "image_shape": [
+    2,
+    1,
+    8,
+    8
+  ],
+  "pair_input_size": 68,
+  "discriminator_loss": 0.6585428714752197,
+  "generator_encoder_loss": 0.7391968369483948,
+  "gradient_norms": {
+    "generator.quantum.weight": 0.02657201699912548,
+    "generator.decoder.0.weight": 0.0815679058432579,
+    "generator.decoder.0.bias": 0.006623163353651762,
+    "generator.decoder.2.weight": 0.06392744183540344,
+    "generator.decoder.2.bias": 0.015101184137165546,
+    "encoder.image_to_angles.weight": 0.07383153587579727,
+    "encoder.image_to_angles.bias": 0.020223744213581085,
+    "encoder.quantum.weight": 0.007747529540210962
+  },
+  "checks": [
+    "generated image shape/range",
+    "latent sensitivity",
+    "latent gradient",
+    "real/fake pair logits",
+    "D-only update",
+    "G/E-only update",
+    "finite losses"
+  ]
+}

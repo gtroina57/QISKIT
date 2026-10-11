@@ -1,0 +1,43 @@
+{
+  "stage": 1,
+  "status": "passed",
+  "original_sha256": "34caa543d1d1b0c597fbc26302e7e6a09172befab4c2d934c85c5662f8326d63",
+  "versions": {
+    "qiskit": "2.3.1",
+    "qiskit-machine-learning": "0.9.1",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.3.2",
+    "scipy": "1.16.1"
+  },
+  "latent_dim": 4,
+  "trainable_weights": 84,
+  "output_shape": [
+    2,
+    64
+  ],
+  "latent_distribution_l1_difference": 0.9375,
+  "checks": [
+    "parameter separation",
+    "single and batch forward",
+    "normalized probabilities",
+    "latent sensitivity",
+    "input and weight gradients",
+    "optimizer update",
+    "two training epochs",
+    "latent-marginal evaluation",
+    "original unchanged"
+  ],
+  "generator_loss": [
+    0.6070265769958496,
+    0.6374545693397522
+  ],
+  "discriminator_loss": [
+    0.6998146772384644,
+    0.696328341960907
+  ],
+  "relative_entropy": [
+    0.5906594062753409,
+    0.6869961205132343
+  ],
+  "elapsed_seconds": 26.83493839998846
+}
