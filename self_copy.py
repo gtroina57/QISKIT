@@ -1,7 +1,7 @@
 import os
 
 def main():
-    # Read own source code from disk
+    # Read own source code from  disk
     source_path = os.path.abspath(__file__)
     with open(source_path, "r", encoding="utf-8") as f:
         source_text = f.read()
