@@ -1,0 +1,121 @@
+Synthetic Structured Worlds
+
+Version 1.0  |  Reproducible dataset specification  |  11 October 2026
+
+Purpose
+
+Synthetic Structured Worlds (SSW) is a compact, fully specified synthetic benchmark for comparing classical and hybrid quantum representation learning. The same observations and splits can be used for both quantum-JEPA and quantum-BiGAN studies. Version 1.0 is a finalized benchmark design; prior conversational examples were illustrative and are superseded by the equations below.
+
+1. Hidden factors
+
+Sample four independent binary factors (a,b,c,d) ∈ {0,1}⁴. All 16 configurations exist in the underlying world. The four factors are not related by a constraint; instead, contextual behavior appears in the eighth observed feature.
+
+2. Eight noiseless observed features
+
+Feature
+
+Exact formula
+
+x₁
+
+a
+
+x₂
+
+b
+
+x₃
+
+c
+
+x₄
+
+d
+
+x₅
+
+a XOR b
+
+x₆
+
+b XOR c
+
+x₇
+
+a AND d
+
+x₈
+
+(a XOR d), if c = 0; (b AND d), if c = 1
+
+XOR returns 1 when the operands differ; AND returns 1 when both operands are 1. Each clean feature is 0 or 1. Keeping x₁–x₄ visible makes the dataset useful for pipeline debugging but also makes direct recovery of the factors easy; these baseline results must not be interpreted as evidence of powerful representation learning.
+
+3. Observation noise
+
+Each sample draws independent additive Gaussian noise εᵢ ∼ N(0, 0.05²), for i = 1,…,8. The observed vector is x = x_clean + ε. No clipping or normalization is applied by the generator. Values therefore can lie slightly outside [0,1]. Any subsequent scaling must be fit using training data only and documented.
+
+4. Exact train / evaluation split
+
+The four held-out (a,b,c,d) configurations are (0,0,1,1), (0,1,0,1), (1,0,1,0), and (1,1,0,0). The other 12 configurations form the in-distribution pool. Hidden configurations are sampled uniformly within the relevant pool with replacement; each selected configuration receives independently drawn observation noise.
+
+Split
+
+Samples
+
+Configuration pool
+
+train
+
+2,000
+
+12 in-distribution patterns
+
+val_iid
+
+400
+
+12 in-distribution patterns
+
+test_iid
+
+400
+
+12 in-distribution patterns
+
+test_ood
+
+400
+
+4 held-out patterns
+
+IID here means unseen noise realizations, not unseen hidden configurations. OOD tests generalization to held-out binary combinations, but is a small, controlled compositional test, not evidence of real-world out-of-distribution robustness.
+
+5. Reproducibility
+
+Reference implementation: ssw_dataset.py; NumPy random generator: numpy.random.default_rng(20261011); noise standard deviation: 0.05. Executing the script writes ssw_v1.npz and ssw_v1_metadata.json beside the script. An NPZ stores, for every split, x (float32 noisy observations), hidden_bits (int8, four columns), and x_clean (float32 noiseless observations). The generator chooses each split sequentially using one RNG instance, in the order train, val_iid, test_iid, test_ood.
+
+6. Proposed models and fair comparisons
+
+Classical BiGAN: classical encoder E: R⁸ → Rᵏ, classical generator G: Rᵏ → R⁸, and classical discriminator D on pairs (x,z). Hybrid BiGAN: replace E with a four-qubit parameterized quantum circuit plus explicitly defined classical input/output mappings, while keeping G, D, latent dimension, data, and training protocol as comparable as possible. JEPA experiments should retain the same splits but use a separately defined predictive objective.
+
+A practical initial choice is k = 4, though qubit count and latent dimension need not match. Four expectation values, for example, can serve as bounded quantum features, followed by a learned classical projection. The BiGAN prior should be selected consistently with its encoder output geometry; without this, adversarial training may fail for reasons unrelated to quantum representation power.
+
+7. Evaluation plan
+
+Basic data integrity: verify feature formulas, shapes, random seed, and zero overlap of hidden patterns between train and test_ood.
+
+BiGAN training: discriminator accuracy and losses, stability across several random seeds, and sample quality in the eight-dimensional observation space.
+
+Latent quality: hidden-bit decoding on IID and OOD evaluation data, using probes trained only on the training split.
+
+Consistency: reconstruction error ||G(E(x)) − x|| and round-trip latent error ||E(G(z)) − z||, reported as diagnostics rather than guaranteed by the objective.
+
+Ablations: classical parameter-matched encoder, four-qubit circuit with entangling gates, and a non-entangling circuit; record trainable parameter counts and runtime.
+
+8. Limitations and versioning
+
+The dataset contains just 16 discrete hidden configurations and exposes each binary factor directly in x₁–x₄, so it is a useful integration and diagnostic benchmark, but an easy representation problem. Distinct training and OOD configurations are essential, yet noise alone cannot create independent semantics. Version 1.1 could remove direct factor copies, add continuous nuisance variables, and assess robustness; changes must be versioned rather than silently modifying v1.0.
+
+Included companion files
+
+ssw_dataset.py — executable generator; ssw_v1.npz — generated arrays; ssw_v1_metadata.json — documented settings. Keep all four files together to reproduce the experiments.

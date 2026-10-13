@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "seed": 20261011,
+  "noise_std": 0.05,
+  "split_sizes": {
+    "train": 2000,
+    "val_iid": 400,
+    "test_iid": 400,
+    "test_ood": 400
+  },
+  "held_out": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "scaling": "none",
+  "clipping": "none",
+  "split_order": [
+    "train",
+    "val_iid",
+    "test_iid",
+    "test_ood"
+  ],
+  "selection": "rng.integers; lexicographic IID pool; listed OOD pool",
+  "provenance": "Recreated from supplied specification; original companion code not found",
+  "validation": {
+    "status": "passed",
+    "checks": [
+      "formulas",
+      "dtypes/shapes",
+      "configuration pools",
+      "OOD separation",
+      "noise statistics",
+      "deterministic regeneration"
+    ]
+  }
+}

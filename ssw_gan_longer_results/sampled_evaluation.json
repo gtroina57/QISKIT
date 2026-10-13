@@ -1,0 +1,135 @@
+{
+  "seed_note": "Training and this finite-shot diagnostic use an unseeded sampler.",
+  "versions": {
+    "qiskit": "2.3.1",
+    "qiskit-machine-learning": "0.9.1",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.3.2"
+  },
+  "checkpoints": {
+    "best": {
+      "step": 12,
+      "noiseless_validation": {
+        "rbf_mmd_squared": 0.19673488223926916,
+        "feature_mean_mae": 0.31134098768234253,
+        "feature_std_mae": 0.29732099175453186,
+        "thresholded_configuration_counts": [
+          31,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          228,
+          130,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "covered_configurations": 5,
+        "logic_residual_mse": 0.2744312584400177,
+        "generated_min": -0.5867151618003845,
+        "generated_max": 1.5736196041107178
+      },
+      "sampled_validation": {
+        "rbf_mmd_squared": 0.19670866635809192,
+        "feature_mean_mae": 0.3137727379798889,
+        "feature_std_mae": 0.29106125235557556,
+        "thresholded_configuration_counts": [
+          34,
+          10,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          221,
+          130,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "covered_configurations": 5,
+        "logic_residual_mse": 0.2756696045398712,
+        "generated_min": -0.6055129766464233,
+        "generated_max": 1.5938823223114014
+      },
+      "discriminator": {
+        "real_classified_real_rate": 1.0,
+        "fake_classified_real_rate": 1.0,
+        "balanced_accuracy": 0.5
+      }
+    },
+    "final": {
+      "step": 64,
+      "noiseless_validation": {
+        "rbf_mmd_squared": 1.4133798422979664,
+        "feature_mean_mae": 1.3394496440887451,
+        "feature_std_mae": 0.2650797963142395,
+        "thresholded_configuration_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          374,
+          0,
+          0,
+          0,
+          26
+        ],
+        "covered_configurations": 2,
+        "logic_residual_mse": 2.293663263320923,
+        "generated_min": -0.4603337347507477,
+        "generated_max": 4.694179058074951
+      },
+      "sampled_validation": {
+        "rbf_mmd_squared": 1.4085826873469296,
+        "feature_mean_mae": 1.3406299352645874,
+        "feature_std_mae": 0.258182168006897,
+        "thresholded_configuration_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          370,
+          0,
+          0,
+          0,
+          26
+        ],
+        "covered_configurations": 3,
+        "logic_residual_mse": 2.2996702194213867,
+        "generated_min": -0.4730628430843353,
+        "generated_max": 4.61907434463501
+      },
+      "discriminator": {
+        "real_classified_real_rate": 0.6324999928474426,
+        "fake_classified_real_rate": 0.0,
+        "balanced_accuracy": 0.8162499666213989
+      }
+    }
+  }
+}

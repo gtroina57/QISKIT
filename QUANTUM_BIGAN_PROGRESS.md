@@ -1,5 +1,58 @@
 # Quantum BiGAN development
 
+## Latest SSW continuation
+
+`GAN_04_SSW_quantum_generator_longer.ipynb` resumed the twelve-step SSW quantum
+GAN to 64 total updates with the same architecture and specified observation
+noise, still without an encoder. This continuation worsened: validation MMD²
+ended at 1.41338, versus 0.19673 for the preserved best checkpoint at step 12.
+The fixed and finite-shot evaluations agree on this deterioration. Generated
+feature values drifted and thresholded configuration coverage fell from five
+to two. See `SSW_LONGER_RUN.md` and the best/final comparison under
+`ssw_gan_longer_results`. The next work should isolate a stabilization change
+before adding an encoder, rather than assuming a longer run is sufficient.
+
+## Current SSW experiment and dataset correction
+
+The supplied SSW v1.0 specification is authoritative: eight noisy vector
+features derived from four binary factors. Earlier 8x8 gradient images were
+the wrong dataset for SSW; their results are implementation checks only and
+must not be presented as SSW benchmark results.
+
+`GAN_03_SSW_quantum_generator.ipynb` now uses the recreated specified dataset
+with the retained four-input quantum generator, an eight-output linear decoder
+and an eight-input discriminator. It contains no encoder. Validation passed,
+then the notebook completed twelve training steps and fixed-input evaluation.
+Validation MMD improved from 0.48504 to 0.19673, but diversity and logic still
+need improvement. See `SSW_QUANTUM_GAN.md`. This run processed 48 examples from
+the 2,000-sample pool, not a full epoch. Previous experiments are preserved.
+
+## Current convergence gate
+
+**Latest monitoring result:** `GAN_01_latent4_monitored.ipynb` completed 50
+epochs with unchanged training and added fixed/noiseless evaluation plus
+best/final checkpoints. Exact marginal KL improved from 0.51008 to 0.30105;
+the best epoch was the final epoch, 50. Large training-batch spikes did not
+correspond to sustained marginal deterioration in this run. See
+`LATENT_MONITORING.md` and `latent_monitor_results/monitoring.png`. This is
+single-run evidence of approximate learning, not exact Gaussian convergence.
+
+**Updated after tutorial reproduction:** the unchanged original code reproduces
+approximate behavior consistent with the published tutorial. Its published
+relative entropy ends near 0.42, while our unseeded run ends near 0.39 during
+training. The earlier blanket hold was based on stricter probability accuracy
+than the tutorial demonstrates. See `TUTORIAL_REPRODUCTION.md`. The historical
+investigation below remains valid, but is not evidence that the original
+tutorial is broken. The BiGAN's image-generation quality is still unestablished.
+
+Further BiGAN development is on hold while preliminary qGAN distribution
+learning is investigated. Execution/gradient validation below is not evidence
+of convergence. The matched 50-epoch original/latent comparison across three
+seeds is documented in `QGAN_CONVERGENCE.md` and `convergence_results`.
+Neither model closely matches the Gaussian after 50 epochs. The latent version
+finishes closer in all three pairs, but further training changes need evidence
+before proceeding. The existing BiGAN artifacts are preserved.
+
 ## Stage 1 — validated
 
 `GAN_01.ipynb` is unchanged. `GAN_01_latent4.ipynb` is its separate stage-one
@@ -127,3 +180,7 @@ across seeds before comparing model quality.
 
 References: [Qiskit PyTorch qGAN tutorial](https://qiskit-community.github.io/qiskit-machine-learning/tutorials/04_torch_qgan.html)
 and [TorchConnector tutorial](https://qiskit-community.github.io/qiskit-machine-learning/tutorials/05_torch_connector.html).
+
+## Discriminator-update trial
+
+Notebook 05 completed: three D updates per G update after step 12, through step 64. Best step 48; final validation MMD² 0.7283. See [SSW_STABILIZATION.md](SSW_STABILIZATION.md). No encoder added.

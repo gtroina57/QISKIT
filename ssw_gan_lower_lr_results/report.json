@@ -1,0 +1,1045 @@
+{
+  "dataset": "SSW v1.0",
+  "encoder": false,
+  "steps": 64,
+  "batch_size": 4,
+  "training_pool_size": 2000,
+  "processed_training_examples": 256,
+  "resumed_from": "C:\\Users\\giuse\\Documents\\Master\\DOUBT_QC\\ssw_gan_results\\final.pt",
+  "new_steps": 52,
+  "generator_learning_rate": 0.0002,
+  "discriminator_learning_rate": 0.001,
+  "generator_learning_rate_override": 0.0002,
+  "discriminator_updates_per_generator": 1,
+  "discriminator_updates_changed_after_step": 12,
+  "full_training_epoch": false,
+  "seed": 123456,
+  "best_step": 12,
+  "selection": "val_iid RBF MMD\u00b2",
+  "bandwidth_from_train": 2.020221659558627,
+  "history": [
+    {
+      "step": 0,
+      "rbf_mmd_squared": 0.4850379721562854,
+      "feature_mean_mae": 0.5491904616355896,
+      "feature_std_mae": 0.29909273982048035,
+      "thresholded_configuration_counts": [
+        400,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 1,
+      "logic_residual_mse": 0.16540248692035675,
+      "generated_min": -1.3156100511550903,
+      "generated_max": 0.901003897190094
+    },
+    {
+      "step": 4,
+      "rbf_mmd_squared": 0.31129178387930945,
+      "feature_mean_mae": 0.4012563228607178,
+      "feature_std_mae": 0.3025432229042053,
+      "thresholded_configuration_counts": [
+        357,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        35,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 4,
+      "logic_residual_mse": 0.14862269163131714,
+      "generated_min": -1.0408172607421875,
+      "generated_max": 0.9385010004043579
+    },
+    {
+      "step": 8,
+      "rbf_mmd_squared": 0.21380420594635008,
+      "feature_mean_mae": 0.3129574656486511,
+      "feature_std_mae": 0.301594614982605,
+      "thresholded_configuration_counts": [
+        196,
+        29,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        155,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 4,
+      "logic_residual_mse": 0.2398868203163147,
+      "generated_min": -0.7819380760192871,
+      "generated_max": 1.2404532432556152
+    },
+    {
+      "step": 12,
+      "rbf_mmd_squared": 0.19673488223926916,
+      "feature_mean_mae": 0.31134098768234253,
+      "feature_std_mae": 0.29732099175453186,
+      "thresholded_configuration_counts": [
+        31,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        228,
+        130,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 5,
+      "logic_residual_mse": 0.2744312584400177,
+      "generated_min": -0.5867151618003845,
+      "generated_max": 1.5736196041107178
+    },
+    {
+      "step": 16,
+      "rbf_mmd_squared": 0.20574697264243103,
+      "feature_mean_mae": 0.3148675858974457,
+      "feature_std_mae": 0.29614388942718506,
+      "thresholded_configuration_counts": [
+        20,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        209,
+        157,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 5,
+      "logic_residual_mse": 0.2692584693431854,
+      "generated_min": -0.5561115145683289,
+      "generated_max": 1.6473525762557983
+    },
+    {
+      "step": 20,
+      "rbf_mmd_squared": 0.21511324715357283,
+      "feature_mean_mae": 0.3245415985584259,
+      "feature_std_mae": 0.2952718138694763,
+      "thresholded_configuration_counts": [
+        10,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        185,
+        194,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 5,
+      "logic_residual_mse": 0.2529574930667877,
+      "generated_min": -0.5356379747390747,
+      "generated_max": 1.7199349403381348
+    },
+    {
+      "step": 24,
+      "rbf_mmd_squared": 0.22525676155738994,
+      "feature_mean_mae": 0.33457469940185547,
+      "feature_std_mae": 0.29472172260284424,
+      "thresholded_configuration_counts": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        148,
+        241,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 4,
+      "logic_residual_mse": 0.23055265843868256,
+      "generated_min": -0.5109008550643921,
+      "generated_max": 1.7794504165649414
+    },
+    {
+      "step": 28,
+      "rbf_mmd_squared": 0.2375598545761508,
+      "feature_mean_mae": 0.3436009883880615,
+      "feature_std_mae": 0.2939094603061676,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        124,
+        269,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 3,
+      "logic_residual_mse": 0.21827304363250732,
+      "generated_min": -0.4959232807159424,
+      "generated_max": 1.8299027681350708
+    },
+    {
+      "step": 32,
+      "rbf_mmd_squared": 0.2504077231723545,
+      "feature_mean_mae": 0.3502989411354065,
+      "feature_std_mae": 0.293234646320343,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        92,
+        300,
+        6,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 4,
+      "logic_residual_mse": 0.20375223457813263,
+      "generated_min": -0.4760710299015045,
+      "generated_max": 1.876473307609558
+    },
+    {
+      "step": 36,
+      "rbf_mmd_squared": 0.2632356633872457,
+      "feature_mean_mae": 0.35565370321273804,
+      "feature_std_mae": 0.2929202914237976,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        72,
+        321,
+        6,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 4,
+      "logic_residual_mse": 0.19498172402381897,
+      "generated_min": -0.46238288283348083,
+      "generated_max": 1.9141114950180054
+    },
+    {
+      "step": 40,
+      "rbf_mmd_squared": 0.2761830459789558,
+      "feature_mean_mae": 0.37194401025772095,
+      "feature_std_mae": 0.29296571016311646,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        49,
+        343,
+        5,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 4,
+      "logic_residual_mse": 0.1846173256635666,
+      "generated_min": -0.4472137689590454,
+      "generated_max": 1.9494643211364746
+    },
+    {
+      "step": 44,
+      "rbf_mmd_squared": 0.29027475418246707,
+      "feature_mean_mae": 0.387134313583374,
+      "feature_std_mae": 0.29266899824142456,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        38,
+        355,
+        4,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "covered_configurations": 5,
+      "logic_residual_mse": 0.18006204068660736,
+      "generated_min": -0.431918740272522,
+      "generated_max": 1.9688042402267456
+    },
+    {
+      "step": 48,
+      "rbf_mmd_squared": 0.3058182863262764,
+      "feature_mean_mae": 0.40224677324295044,
+      "feature_std_mae": 0.29232922196388245,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        365,
+        1,
+        3,
+        0,
+        1,
+        0,
+        0
+      ],
+      "covered_configurations": 5,
+      "logic_residual_mse": 0.17854470014572144,
+      "generated_min": -0.414869099855423,
+      "generated_max": 1.9870524406433105
+    },
+    {
+      "step": 52,
+      "rbf_mmd_squared": 0.3220492881846575,
+      "feature_mean_mae": 0.4154367446899414,
+      "feature_std_mae": 0.2921578586101532,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        22,
+        375,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "covered_configurations": 5,
+      "logic_residual_mse": 0.1821078062057495,
+      "generated_min": -0.39802420139312744,
+      "generated_max": 2.002272129058838
+    },
+    {
+      "step": 56,
+      "rbf_mmd_squared": 0.33726250487133114,
+      "feature_mean_mae": 0.4257490634918213,
+      "feature_std_mae": 0.291946679353714,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        21,
+        377,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "covered_configurations": 4,
+      "logic_residual_mse": 0.18815256655216217,
+      "generated_min": -0.38757219910621643,
+      "generated_max": 2.009835958480835
+    },
+    {
+      "step": 60,
+      "rbf_mmd_squared": 0.34962433423374195,
+      "feature_mean_mae": 0.43247124552726746,
+      "feature_std_mae": 0.2917916774749756,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19,
+        379,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "covered_configurations": 4,
+      "logic_residual_mse": 0.19425244629383087,
+      "generated_min": -0.3704438805580139,
+      "generated_max": 2.0088610649108887
+    },
+    {
+      "step": 64,
+      "rbf_mmd_squared": 0.35917331815157394,
+      "feature_mean_mae": 0.4337509870529175,
+      "feature_std_mae": 0.2920307219028473,
+      "thresholded_configuration_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        381,
+        1,
+        4,
+        0,
+        3,
+        0,
+        0
+      ],
+      "covered_configurations": 5,
+      "logic_residual_mse": 0.1975586712360382,
+      "generated_min": -0.35707664489746094,
+      "generated_max": 2.0348122119903564
+    }
+  ],
+  "losses": [
+    {
+      "step": 1,
+      "discriminator_loss": 0.6333444118499756,
+      "generator_loss": 0.6433053612709045,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 2,
+      "discriminator_loss": 0.6601885557174683,
+      "generator_loss": 0.6323881149291992,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 3,
+      "discriminator_loss": 0.6849605441093445,
+      "generator_loss": 0.6359297037124634,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 4,
+      "discriminator_loss": 0.6837447881698608,
+      "generator_loss": 0.620458722114563,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 5,
+      "discriminator_loss": 0.6915891766548157,
+      "generator_loss": 0.5933631658554077,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 6,
+      "discriminator_loss": 0.665255069732666,
+      "generator_loss": 0.6029710173606873,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 7,
+      "discriminator_loss": 0.6461087465286255,
+      "generator_loss": 0.5930132865905762,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 8,
+      "discriminator_loss": 0.6912130117416382,
+      "generator_loss": 0.5762605667114258,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 9,
+      "discriminator_loss": 0.6822150945663452,
+      "generator_loss": 0.5556093454360962,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 10,
+      "discriminator_loss": 0.6881191730499268,
+      "generator_loss": 0.5489414930343628,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 11,
+      "discriminator_loss": 0.6844452619552612,
+      "generator_loss": 0.5516431927680969,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 12,
+      "discriminator_loss": 0.7496660947799683,
+      "generator_loss": 0.5135300755500793,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 13,
+      "discriminator_loss": 0.7409795522689819,
+      "generator_loss": 0.5040199756622314,
+      "quantum_gradient_norm": 0.09275242668376864,
+      "decoder_gradient_norm": 0.5383230459662343,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 14,
+      "discriminator_loss": 0.7341557145118713,
+      "generator_loss": 0.5143685340881348,
+      "quantum_gradient_norm": 0.07258473468572263,
+      "decoder_gradient_norm": 0.5257498098428817,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 15,
+      "discriminator_loss": 0.7178952693939209,
+      "generator_loss": 0.5263211131095886,
+      "quantum_gradient_norm": 0.079187253846737,
+      "decoder_gradient_norm": 0.5231421214061359,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 16,
+      "discriminator_loss": 0.72983717918396,
+      "generator_loss": 0.5147624015808105,
+      "quantum_gradient_norm": 0.08615138644534284,
+      "decoder_gradient_norm": 0.5712032276742824,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 17,
+      "discriminator_loss": 0.7164779901504517,
+      "generator_loss": 0.513350248336792,
+      "quantum_gradient_norm": 0.07494025447472977,
+      "decoder_gradient_norm": 0.5762456168910087,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 18,
+      "discriminator_loss": 0.7407845258712769,
+      "generator_loss": 0.5311096906661987,
+      "quantum_gradient_norm": 0.0759581011717909,
+      "decoder_gradient_norm": 0.5669788255789909,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 19,
+      "discriminator_loss": 0.7301456332206726,
+      "generator_loss": 0.5159335136413574,
+      "quantum_gradient_norm": 0.08684047538926253,
+      "decoder_gradient_norm": 0.54085850314108,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 20,
+      "discriminator_loss": 0.7393970489501953,
+      "generator_loss": 0.5032948851585388,
+      "quantum_gradient_norm": 0.08478301149523328,
+      "decoder_gradient_norm": 0.546812109399609,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 21,
+      "discriminator_loss": 0.756345272064209,
+      "generator_loss": 0.5212345123291016,
+      "quantum_gradient_norm": 0.11191881198922292,
+      "decoder_gradient_norm": 0.5331002028637382,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 22,
+      "discriminator_loss": 0.7405630350112915,
+      "generator_loss": 0.5336563587188721,
+      "quantum_gradient_norm": 0.09141229653641848,
+      "decoder_gradient_norm": 0.5167940471132164,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 23,
+      "discriminator_loss": 0.7459139823913574,
+      "generator_loss": 0.5322571992874146,
+      "quantum_gradient_norm": 0.09270280453962741,
+      "decoder_gradient_norm": 0.5283366545530197,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 24,
+      "discriminator_loss": 0.7372435331344604,
+      "generator_loss": 0.5201388597488403,
+      "quantum_gradient_norm": 0.07609405237501933,
+      "decoder_gradient_norm": 0.4931236640494252,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 25,
+      "discriminator_loss": 0.7172808647155762,
+      "generator_loss": 0.5582690238952637,
+      "quantum_gradient_norm": 0.0698504187145049,
+      "decoder_gradient_norm": 0.4904828553653838,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 26,
+      "discriminator_loss": 0.7398253083229065,
+      "generator_loss": 0.5278615951538086,
+      "quantum_gradient_norm": 0.07949366124778968,
+      "decoder_gradient_norm": 0.4988105403892781,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 27,
+      "discriminator_loss": 0.7579547166824341,
+      "generator_loss": 0.5253875851631165,
+      "quantum_gradient_norm": 0.07238199322774574,
+      "decoder_gradient_norm": 0.4773473417482257,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 28,
+      "discriminator_loss": 0.7575217485427856,
+      "generator_loss": 0.5152985453605652,
+      "quantum_gradient_norm": 0.05236055728735231,
+      "decoder_gradient_norm": 0.40826436856661447,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 29,
+      "discriminator_loss": 0.7105086445808411,
+      "generator_loss": 0.5382982492446899,
+      "quantum_gradient_norm": 0.1026986993988298,
+      "decoder_gradient_norm": 0.48601697164954466,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 30,
+      "discriminator_loss": 0.7166415452957153,
+      "generator_loss": 0.552931547164917,
+      "quantum_gradient_norm": 0.07553705055983924,
+      "decoder_gradient_norm": 0.49618404248603876,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 31,
+      "discriminator_loss": 0.7208269834518433,
+      "generator_loss": 0.5462385416030884,
+      "quantum_gradient_norm": 0.0724798762892574,
+      "decoder_gradient_norm": 0.4877133242312707,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 32,
+      "discriminator_loss": 0.7316205501556396,
+      "generator_loss": 0.5498734712600708,
+      "quantum_gradient_norm": 0.061879401452603,
+      "decoder_gradient_norm": 0.4832605235521842,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 33,
+      "discriminator_loss": 0.7317184209823608,
+      "generator_loss": 0.5600809454917908,
+      "quantum_gradient_norm": 0.065176186542349,
+      "decoder_gradient_norm": 0.4558455341436047,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 34,
+      "discriminator_loss": 0.7031413316726685,
+      "generator_loss": 0.565240204334259,
+      "quantum_gradient_norm": 0.07522318069928823,
+      "decoder_gradient_norm": 0.43581609114940423,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 35,
+      "discriminator_loss": 0.7035361528396606,
+      "generator_loss": 0.5741851329803467,
+      "quantum_gradient_norm": 0.08528770276821346,
+      "decoder_gradient_norm": 0.45587272046542615,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 36,
+      "discriminator_loss": 0.7189184427261353,
+      "generator_loss": 0.559257984161377,
+      "quantum_gradient_norm": 0.05694787052250083,
+      "decoder_gradient_norm": 0.41646237450338025,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 37,
+      "discriminator_loss": 0.688575029373169,
+      "generator_loss": 0.5804704427719116,
+      "quantum_gradient_norm": 0.06343832467544878,
+      "decoder_gradient_norm": 0.4564759366959512,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 38,
+      "discriminator_loss": 0.716698169708252,
+      "generator_loss": 0.5656174421310425,
+      "quantum_gradient_norm": 0.0682544729811433,
+      "decoder_gradient_norm": 0.39995735456839754,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 39,
+      "discriminator_loss": 0.7045065760612488,
+      "generator_loss": 0.5796909332275391,
+      "quantum_gradient_norm": 0.0839473174221033,
+      "decoder_gradient_norm": 0.5047915159052557,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 40,
+      "discriminator_loss": 0.7254802584648132,
+      "generator_loss": 0.5571641325950623,
+      "quantum_gradient_norm": 0.06804782348402158,
+      "decoder_gradient_norm": 0.4021754189164442,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 41,
+      "discriminator_loss": 0.7131510972976685,
+      "generator_loss": 0.5706089735031128,
+      "quantum_gradient_norm": 0.07420914728973517,
+      "decoder_gradient_norm": 0.3780222355652913,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 42,
+      "discriminator_loss": 0.7004060745239258,
+      "generator_loss": 0.5802431702613831,
+      "quantum_gradient_norm": 0.06178378734381322,
+      "decoder_gradient_norm": 0.4418737620899154,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 43,
+      "discriminator_loss": 0.7219062447547913,
+      "generator_loss": 0.5649121999740601,
+      "quantum_gradient_norm": 0.07228082431302957,
+      "decoder_gradient_norm": 0.43523337176977184,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 44,
+      "discriminator_loss": 0.7166228294372559,
+      "generator_loss": 0.588119387626648,
+      "quantum_gradient_norm": 0.06711193502824557,
+      "decoder_gradient_norm": 0.4994696489392982,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 45,
+      "discriminator_loss": 0.7212307453155518,
+      "generator_loss": 0.5728605389595032,
+      "quantum_gradient_norm": 0.05537108352987718,
+      "decoder_gradient_norm": 0.37408321676039086,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 46,
+      "discriminator_loss": 0.7170625925064087,
+      "generator_loss": 0.5775357484817505,
+      "quantum_gradient_norm": 0.057691140300922907,
+      "decoder_gradient_norm": 0.4124670299301155,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 47,
+      "discriminator_loss": 0.7237894535064697,
+      "generator_loss": 0.5957674980163574,
+      "quantum_gradient_norm": 0.07011627590998754,
+      "decoder_gradient_norm": 0.39794121406756433,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 48,
+      "discriminator_loss": 0.7329169511795044,
+      "generator_loss": 0.593094527721405,
+      "quantum_gradient_norm": 0.05627732356283626,
+      "decoder_gradient_norm": 0.35250183983104494,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 49,
+      "discriminator_loss": 0.712245762348175,
+      "generator_loss": 0.5837724804878235,
+      "quantum_gradient_norm": 0.06808842418497958,
+      "decoder_gradient_norm": 0.4631180013612427,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 50,
+      "discriminator_loss": 0.7036633491516113,
+      "generator_loss": 0.6026734709739685,
+      "quantum_gradient_norm": 0.05523180690212064,
+      "decoder_gradient_norm": 0.3407613636822656,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 51,
+      "discriminator_loss": 0.7091110348701477,
+      "generator_loss": 0.596589207649231,
+      "quantum_gradient_norm": 0.047567805389510893,
+      "decoder_gradient_norm": 0.27323631757662015,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 52,
+      "discriminator_loss": 0.7067894339561462,
+      "generator_loss": 0.5982437133789062,
+      "quantum_gradient_norm": 0.06332861772432101,
+      "decoder_gradient_norm": 0.3495644375089162,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 53,
+      "discriminator_loss": 0.7152308225631714,
+      "generator_loss": 0.6033374071121216,
+      "quantum_gradient_norm": 0.04697189499846524,
+      "decoder_gradient_norm": 0.34244118069735446,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 54,
+      "discriminator_loss": 0.7234300374984741,
+      "generator_loss": 0.6049803495407104,
+      "quantum_gradient_norm": 0.05169157025255049,
+      "decoder_gradient_norm": 0.3076157093828469,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 55,
+      "discriminator_loss": 0.7229951024055481,
+      "generator_loss": 0.6060143709182739,
+      "quantum_gradient_norm": 0.04001791856208393,
+      "decoder_gradient_norm": 0.2605121252425497,
+      "discriminator_accuracy": 0.375
+    },
+    {
+      "step": 56,
+      "discriminator_loss": 0.7100550532341003,
+      "generator_loss": 0.6097972989082336,
+      "quantum_gradient_norm": 0.04588265909170126,
+      "decoder_gradient_norm": 0.2923584012723194,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 57,
+      "discriminator_loss": 0.7029798626899719,
+      "generator_loss": 0.6151752471923828,
+      "quantum_gradient_norm": 0.04798726235917038,
+      "decoder_gradient_norm": 0.36573589853533817,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 58,
+      "discriminator_loss": 0.6969106793403625,
+      "generator_loss": 0.6320367455482483,
+      "quantum_gradient_norm": 0.051100076398612436,
+      "decoder_gradient_norm": 0.36373131043122825,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 59,
+      "discriminator_loss": 0.6883471012115479,
+      "generator_loss": 0.6300711631774902,
+      "quantum_gradient_norm": 0.033774378649939596,
+      "decoder_gradient_norm": 0.24980212525309586,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 60,
+      "discriminator_loss": 0.7101079821586609,
+      "generator_loss": 0.6166526675224304,
+      "quantum_gradient_norm": 0.05107509760275157,
+      "decoder_gradient_norm": 0.31025304335783865,
+      "discriminator_accuracy": 0.375
+    },
+    {
+      "step": 61,
+      "discriminator_loss": 0.7082054018974304,
+      "generator_loss": 0.6296436190605164,
+      "quantum_gradient_norm": 0.045885515177004614,
+      "decoder_gradient_norm": 0.28316795871931305,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 62,
+      "discriminator_loss": 0.7113633751869202,
+      "generator_loss": 0.6297298669815063,
+      "quantum_gradient_norm": 0.04226947834108181,
+      "decoder_gradient_norm": 0.28908474754824837,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 63,
+      "discriminator_loss": 0.705650806427002,
+      "generator_loss": 0.6296999454498291,
+      "quantum_gradient_norm": 0.03841605283733875,
+      "decoder_gradient_norm": 0.2352231210650281,
+      "discriminator_accuracy": 0.5
+    },
+    {
+      "step": 64,
+      "discriminator_loss": 0.7123432159423828,
+      "generator_loss": 0.6359353065490723,
+      "quantum_gradient_norm": 0.03710133790575025,
+      "decoder_gradient_norm": 0.21249497910373913,
+      "discriminator_accuracy": 0.5
+    }
+  ],
+  "selected_test_metrics": {
+    "test_iid": {
+      "rbf_mmd_squared": 0.20479744301716463,
+      "feature_mean_mae": 0.3160994052886963,
+      "feature_std_mae": 0.29705628752708435,
+      "thresholded_configuration_counts": [
+        31,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        228,
+        130,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 5,
+      "logic_residual_mse": 0.2744312584400177,
+      "generated_min": -0.5867151618003845,
+      "generated_max": 1.5736196041107178
+    },
+    "test_ood": {
+      "rbf_mmd_squared": 0.3322992624769592,
+      "feature_mean_mae": 0.3972613513469696,
+      "feature_std_mae": 0.26266658306121826,
+      "thresholded_configuration_counts": [
+        31,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        228,
+        130,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "covered_configurations": 5,
+      "logic_residual_mse": 0.2744312584400177,
+      "generated_min": -0.5867151618003845,
+      "generated_max": 1.5736196041107178
+    }
+  },
+  "note": "Short integration run; no convergence or OOD generation claim. Unconditional generator is trained on IID configurations only."
+}

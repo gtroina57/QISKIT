@@ -1,0 +1,16 @@
+{
+  "best_epoch": 2,
+  "best_exact_kl": 0.5058334876300272,
+  "final_epoch": 2,
+  "final_metrics": {
+    "kl_generated_to_target": 0.5058334876300272,
+    "total_variation": 0.38223693181005935,
+    "fixed_latent_kl": 0.5426364691442649,
+    "fixed_vs_exact_tv": 0.05009089619234517
+  },
+  "best_to_final_kl_increase": 0.0,
+  "fixed_evaluation_vectors": 64,
+  "selection_metric": "KL of noiseless exact uniform-prior marginal",
+  "training_unchanged": true,
+  "sampler_seed": null
+}

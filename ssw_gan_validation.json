@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "dataset": {
+    "status": "passed",
+    "checks": [
+      "formulas",
+      "dtypes/shapes",
+      "configuration pools",
+      "OOD separation",
+      "noise statistics",
+      "deterministic regeneration"
+    ]
+  },
+  "input_shape": [
+    2,
+    4
+  ],
+  "output_shape": [
+    2,
+    8
+  ],
+  "encoder": false,
+  "quantum_weights": 84,
+  "losses": {
+    "discriminator_loss": 0.6249988675117493,
+    "generator_loss": 0.6610928773880005,
+    "discriminator_accuracy": 0.75
+  },
+  "checks": [
+    "latent sensitivity",
+    "finite input/quantum/decoder gradients",
+    "generator updates",
+    "D frozen during G update",
+    "deterministic noiseless evaluation"
+  ]
+}
