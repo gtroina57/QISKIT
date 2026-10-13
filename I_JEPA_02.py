@@ -10,9 +10,9 @@ from qiskit.primitives import StatevectorEstimator
 from qiskit_machine_learning.neural_networks import EstimatorQNN
 from qiskit_machine_learning.connectors import TorchConnector
 
-# --------------------------------------------------
-# 1. Reproducibility
 # ---------------------------------------------------
+# 1. Reproducibility
+# ----------------------------------------------------
 
 SEED = 42
 np.random.seed(SEED)
