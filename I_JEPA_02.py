@@ -12,7 +12,7 @@ from qiskit_machine_learning.connectors import TorchConnector
 
 # --------------------------------------------------
 # 1. Reproducibility
-# --------------------------------------------------
+# ---------------------------------------------------
 
 SEED = 42
 np.random.seed(SEED)
